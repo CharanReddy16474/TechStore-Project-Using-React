@@ -111,7 +111,11 @@ function App() {
       <nav className="navbar">
         <div className="nav-container">
           <a href="#" className="logo" onClick={(e) => e.preventDefault()}>
-            <span className="logo-icon">◆</span>
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYHXPeVkzwQe-5gvHEKqBuvdudm2aNWP7j9ItoSg7GOw&s=10"
+              alt="TechStore Logo"
+              className="logo-img"
+            />
             TechStore
           </a>
 
