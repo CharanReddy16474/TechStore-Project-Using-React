@@ -8,8 +8,32 @@ function App() {
 
   const allBrands = [...new Set(data.map((p) => p.brand))];
 
-  const [cartItems, setCartItems] = useState([]);
-  const [wishlist, setWishlist] = useState([]);
+  const [cartItems, setCartItems] = useState(()=>{
+    const savedCart=localStorage.getItem("techstore-cart");
+    if(savedCart){
+      return JSON.parse(savedCart);
+    }
+    return [];
+  });
+
+useEffect(()=>{
+  
+  localStorage.setItem("techstore-cart",JSON.stringify(cartItems));
+
+},[cartItems])
+
+
+  const [wishlist, setWishlist] = useState(()=>{
+    const savedWishlist=localStorage.getItem("techstore-wishlist");
+    if(savedWishlist){
+      return JSON.parse(savedWishlist);
+    }
+    return[];
+  });
+
+  useEffect(()=>{
+    localStorage.setItem("techstore-wishlist",JSON.stringify(wishlist));
+  },[wishlist])
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedBrand, setSelectedBrand] = useState("All");
   const [sortBy, setSortBy] = useState("All");
