@@ -146,7 +146,7 @@ The application is deployed using **Vercel**.
 Full Stack Developer Intern
 
 - **GitHub:** https://github.com/CharanReddy16474
-- **LinkedIn:** https://www.linkedin.com/
+- **LinkedIn:** https://www.linkedin.com/in/varikuti-sree-charan-reddy
 
 ## ⭐ Support
 
